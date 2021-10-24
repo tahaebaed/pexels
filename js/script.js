@@ -117,21 +117,21 @@ showMoreBtn.addEventListener('click', () => {
   }
 });
 
-window.addEventListener('scroll', () => {
-  if (window.outerHeight) {
-    if (!selectSearchInputs.value) {
-      pageNum++;
-      getDefaultPhotos(pageNum);
-    } else {
-      if (selectSearchInputs.value === '') return;
-      pageNum++;
+// window.addEventListener('scroll', () => {
+//   if (window.outerHeight) {
+//     if (!selectSearchInputs.value) {
+//       pageNum++;
+//       getDefaultPhotos(pageNum);
+//     } else {
+//       if (selectSearchInputs.value === '') return;
+//       pageNum++;
 
-      searchPhoto(searchValue, pageNum);
-    }
-  } else {
-    console.log('That was wrong');
-  }
-});
+//       searchPhoto(searchValue, pageNum);
+//     }
+//   } else {
+//     console.log('That was wrong');
+//   }
+// });
 // selectTabs.forEach(tab =>
 //   tab.addEventListener('click', () =>
 //     tab.classList.contains('active')
