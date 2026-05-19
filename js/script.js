@@ -53,14 +53,8 @@ getDefaultPhotos(pageNum);
 function displayPhotos(res) {
   res.photos.forEach(photo => {
     const pic = document.createElement('div');
-    pic.classList.add(
-      'col-md-3',
-      'me-5',
-      'ms-sm-3',
-      'shwon__photos',
-      'align-baseline'
-    );
-    pic.innerHTML = `<img  src=${photo.src.large}>
+    pic.classList.add('shwon__photos');
+    pic.innerHTML = `<img src=${photo.src.large}>
     <figcaption class="photographer_name row align-items-top"> <a class= "col-8  text-white">${photo.photographer}</a> <div class="col-4 g-1"> <i class="fa-solid fa-download"></i> <i class="fa-solid fa-plus"></i> <i class="fa-regular fa-heart"></i> </div></figcaption>`;
     document.querySelector('.display__photos').appendChild(pic);
   });
